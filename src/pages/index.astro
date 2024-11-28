@@ -4,48 +4,35 @@ import About from '../components/about.astro';
 import SocialPills from '../components/SocialPills.astro';
 import GitHub from '../icons/GitHub.astro';
 import LinkedIn from '../icons/LinkedIn.astro';
-import CodeIcon from '../icons/CodeIcon.astro';
 import Mail from '../icons/Mail.astro';
 import SectionContainer from '../components/SectionContainer.astro';
-import Projects from '../components/Projects.astro';
 ---
 
-<Layout title="Portfolio Pablo Insua - Web Developer">
-    <main class="px-4">
-        <SectionContainer id="inicio" class="py-44 pb-24">
-            <div class="size-40">
-                <img class="rounded-full" src="/pfp.png" alt="pablo photo">
-            </div> 
-            <h1 class="text-white text-2xl md:text-4xl xl:text-5xl font-bold mb-4">Buenas, soy Pablo</h1>
-            <h2 class="text-lg md:text-xl xl:text-2xl opacity-90 text-pretty">Desarrollador Web FullStack. De A Coruña, <span class="text-yellow-200">España</span> 🇪🇸.</h2>
-            <nav class="flex gap-x-4 flex-wrap">
-                <SocialPills href="https://github.com/PabloInsG" class="mt-2 hover:scale-110">
-                    <GitHub class="size-4 md:size-6"></GitHub>
+<Layout title="Pablo | Web Developer">
+    <main>
+        <SectionContainer id="inicio"> 
+            <img class="rounded-full size-40" src="/pfp.png" alt="pablo photo">
+            <h1 class="text-white text-5xl font-bold mb-4">Buenas, soy Pablo</h1>
+            <h2 class="text-2xl opacity-90 text-pretty">Desarrollador Web FullStack. De A Coruña, <span class="text-red-200">España</span> 🇪🇸.</h2>
+            <nav class="flex gap-x-4">
+                <SocialPills href="https://github.com/PabloInsG">
+                    <GitHub class="size-6"></GitHub>
                     GitHub
                 </SocialPills>
-                <SocialPills href="https://www.linkedin.com/in/PabloInsua/" class="mt-2 hover:scale-110">
-                    <LinkedIn class="size-4 md:size-6"></LinkedIn>
+                <SocialPills href="https://www.linkedin.com/in/PabloInsua/">
+                    <LinkedIn class="size-6"></LinkedIn>
                     LinkedIn
                 </SocialPills>
-                <SocialPills class="mt-2 hover:scale-110">
-                    <Mail class="size-4 md:size-6"></Mail>
+                <SocialPills>
+                    <Mail class="size-6"></Mail>
                     pablo.insua.dev@proton.me
                 </SocialPills>
             </nav>
         </SectionContainer>
+
         <SectionContainer id="about">
-            <About />
-        </SectionContainer>
-        <SectionContainer id="proyectos" class="py-24">
-            <div class="flex flex-row">
-                <CodeIcon class="size-10"/>
-                <h2 class="text-4xl opacity-100 text-wrap ml-2">Proyectos</h2>
-            </div>
-            <Projects />
-        </SectionContainer>
-
-        <SectionContainer id="contacto">
-
+            <About>
+            </About>
         </SectionContainer>
     </main>
 </Layout>
